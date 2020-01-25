@@ -1,0 +1,26 @@
+<h2>
+Your Library
+</h2>
+<div *ngFor="let book of books.values()">
+  {{book.title}} by {{book.author}}
+  <button id="myButton" (click)="RemoveBook(book.isbn)">
+    Delete
+  </button>
+</div>
+<h3>
+Add a book:
+</h3>
+ISBN: <input type="string" [(ngModel)]="editISBN" ><br>
+Title: <input type="string" [(ngModel)]="editTitle" ><br>
+Author: <input type="string" [(ngModel)]="editAuthor" ><br>
+<button id="myButton" (click)="AddBook(editISBN, editTitle, editAuthor)">
+  Add
+</button>
+<h3>
+Which book are you reading at the moment:
+</h3>
+<select id="dropdown">
+<option *ngFor="let book of books.values()">
+  {{book.title}} by {{book.author}}
+</option>
+</select>

@@ -1,0 +1,14 @@
+<p>
+What is your name? <input type="string" [(ngModel)]="name" >
+</p>
+<p>
+  How tall are you? <input type="number" step = 0.01 [(ngModel)]="height" >
+</p>
+<hello name="{{ name }}" height = "{{height|number}}"></hello>
+<div>
+  <button id="myButton" (click)="DoSomething()">
+    {{caption}}
+  </button>
+</div>
+<library></library>
+<library></library>
